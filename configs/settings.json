@@ -1,0 +1,103 @@
+{
+    "Version": "4.0",
+    "LastUpdated": "2025-01-01",
+    "ToolkitSettings": {
+        "AutoCreateRestorePoint": true,
+        "ShowProgressBars": true,
+        "VerboseLogging": false,
+        "AutoCheckUpdates": false,
+        "Theme": "Cyan"
+    },
+    "DefaultProfiles": {
+        "ExtremePerfomance": {
+            "MinRAM_GB": 64,
+            "MinCores": 8,
+            "Description": "Maximum performance for high-end systems",
+            "DisableVisualEffects": false,
+            "DisableSuperfetch": true,
+            "DisableIndexing": false,
+            "PageFileSizeMB": 16384,
+            "DisableHibernation": true,
+            "DisablePowerThrottling": true,
+            "EnableGameMode": true,
+            "EnableHAGS": true,
+            "OptimizeForGaming": true,
+            "AggressiveMemoryManagement": true
+        },
+        "HighPerformance": {
+            "MinRAM_GB": 32,
+            "MinCores": 6,
+            "Description": "High performance for 32GB+ RAM systems",
+            "DisableVisualEffects": false,
+            "DisableSuperfetch": true,
+            "DisableIndexing": false,
+            "PageFileSizeMB": 8192,
+            "DisableHibernation": false,
+            "DisablePowerThrottling": true,
+            "EnableGameMode": true,
+            "EnableHAGS": true,
+            "OptimizeForGaming": true,
+            "AggressiveMemoryManagement": false
+        },
+        "Balanced": {
+            "MinRAM_GB": 16,
+            "MinCores": 4,
+            "Description": "Balanced optimization for most systems",
+            "DisableVisualEffects": false,
+            "DisableSuperfetch": true,
+            "DisableIndexing": false,
+            "PageFileSizeMB": 4096,
+            "DisableHibernation": false,
+            "DisablePowerThrottling": false,
+            "EnableGameMode": true,
+            "EnableHAGS": true,
+            "OptimizeForGaming": false,
+            "AggressiveMemoryManagement": false
+        },
+        "PerformanceSaver": {
+            "MinRAM_GB": 0,
+            "MinCores": 0,
+            "Description": "Performance optimization for limited hardware",
+            "DisableVisualEffects": true,
+            "DisableSuperfetch": true,
+            "DisableIndexing": true,
+            "PageFileSizeMB": 2048,
+            "DisableHibernation": false,
+            "DisablePowerThrottling": false,
+            "EnableGameMode": false,
+            "EnableHAGS": false,
+            "OptimizeForGaming": false,
+            "AggressiveMemoryManagement": false
+        }
+    },
+    "PrivacySettings": {
+        "DisableTelemetry": true,
+        "DisableCortana": true,
+        "DisableActivityHistory": true,
+        "DisableAdvertisingID": true,
+        "DisableLocationTracking": true,
+        "DisableWindowsFeedback": true,
+        "DisableWindowsTips": true,
+        "DisableErrorReporting": true
+    },
+    "ScheduledTasksToDisable": [
+        "\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser",
+        "\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater",
+        "\\Microsoft\\Windows\\Application Experience\\StartupAppTask",
+        "\\Microsoft\\Windows\\Autochk\\Proxy",
+        "\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator",
+        "\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip",
+        "\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector",
+        "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient",
+        "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload",
+        "\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting",
+        "\\Microsoft\\Windows\\Maps\\MapsUpdateTask",
+        "\\Microsoft\\Windows\\Maps\\MapsToastTask"
+    ],
+    "Directories": {
+        "BaseDir": "%ProgramData%\\UltimateWindowsToolkit",
+        "LogDir": "%ProgramData%\\UltimateWindowsToolkit\\Logs",
+        "BackupDir": "%ProgramData%\\UltimateWindowsToolkit\\Backups",
+        "TempDir": "%TEMP%\\UltimateWindowsToolkit"
+    }
+}

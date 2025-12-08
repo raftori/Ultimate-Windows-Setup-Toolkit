@@ -1,0 +1,75 @@
+# ============================================
+# Ultimate Windows Setup Toolkit - .gitignore
+# ============================================
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Backups
+backups/
+*.bak
+*.backup
+
+# System restore points
+restorepoints/
+
+# Sensitive/Credentials
+*.key
+*.pem
+*.pfx
+*.p12
+credentials.json
+secrets.json
+*.secret
+
+# Windows artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE/Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# PowerShell
+*.ps1xml
+*.pssc
+*.psrc
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+.~*
+
+# Cache
+*.cache
+__pycache__/
+
+# Build outputs
+bin/
+obj/
+out/
+
+# Test results
+TestResults/
+test-results/
+
+# User-specific config overrides
+settings.local.json
+config.local.json

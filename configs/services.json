@@ -1,0 +1,238 @@
+{
+    "Version": "4.0",
+    "LastUpdated": "2025-01-01",
+    "Description": "Windows services configuration for optimization profiles",
+
+    "profiles": {
+        "gaming": {
+            "name": "Gaming Profile",
+            "description": "Optimized for gaming - disables background services for maximum performance",
+            "disable": [
+                "DiagTrack",
+                "SysMain",
+                "WSearch",
+                "dmwappushservice",
+                "WerSvc",
+                "MapsBroker",
+                "lfsvc",
+                "PcaSvc",
+                "RetailDemo"
+            ],
+            "manual": [
+                "Spooler",
+                "Fax",
+                "TabletInputService"
+            ],
+            "enable": [
+                "MMCSS",
+                "Audiosrv",
+                "AudioEndpointBuilder"
+            ]
+        },
+        "workstation": {
+            "name": "Workstation Profile",
+            "description": "Balanced for productivity - keeps search and some services",
+            "disable": [
+                "DiagTrack",
+                "dmwappushservice",
+                "WerSvc",
+                "RetailDemo",
+                "MapsBroker"
+            ],
+            "manual": [
+                "Fax",
+                "lfsvc"
+            ],
+            "enable": [
+                "WSearch",
+                "Audiosrv",
+                "AudioEndpointBuilder"
+            ]
+        },
+        "minimal": {
+            "name": "Minimal Profile",
+            "description": "For low-spec systems - aggressive service disabling",
+            "disable": [
+                "DiagTrack",
+                "SysMain",
+                "WSearch",
+                "dmwappushservice",
+                "WerSvc",
+                "MapsBroker",
+                "lfsvc",
+                "PcaSvc",
+                "RetailDemo",
+                "Fax",
+                "TabletInputService",
+                "WbioSrvc",
+                "icssvc",
+                "WMPNetworkSvc",
+                "XblAuthManager",
+                "XblGameSave"
+            ],
+            "manual": [
+                "Spooler",
+                "BITS"
+            ],
+            "enable": [
+                "Audiosrv",
+                "AudioEndpointBuilder"
+            ]
+        },
+        "privacy": {
+            "name": "Privacy Profile",
+            "description": "Maximum privacy - disables all telemetry and tracking services",
+            "disable": [
+                "DiagTrack",
+                "dmwappushservice",
+                "WerSvc",
+                "lfsvc",
+                "MapsBroker",
+                "RetailDemo",
+                "CDPUserSvc",
+                "OneSyncSvc",
+                "MessagingService",
+                "PimIndexMaintenanceSvc",
+                "UnistoreSvc",
+                "UserDataSvc",
+                "WpnService"
+            ],
+            "manual": [],
+            "enable": []
+        }
+    },
+
+    "ServicesToDisable": [
+        {
+            "Name": "DiagTrack",
+            "DisplayName": "Connected User Experiences and Telemetry",
+            "Reason": "Telemetry/Privacy",
+            "Safe": true
+        },
+        {
+            "Name": "dmwappushservice",
+            "DisplayName": "WAP Push Message Routing Service",
+            "Reason": "Telemetry/Privacy",
+            "Safe": true
+        },
+        {
+            "Name": "WerSvc",
+            "DisplayName": "Windows Error Reporting Service",
+            "Reason": "Privacy - sends crash data to Microsoft",
+            "Safe": true
+        },
+        {
+            "Name": "SysMain",
+            "DisplayName": "Superfetch/SysMain",
+            "Reason": "Not needed for SSD/NVMe systems",
+            "Safe": true,
+            "Condition": "HasSSD"
+        },
+        {
+            "Name": "WSearch",
+            "DisplayName": "Windows Search",
+            "Reason": "Can be disabled if not using Windows Search",
+            "Safe": true,
+            "Optional": true
+        },
+        {
+            "Name": "RetailDemo",
+            "DisplayName": "Retail Demo Service",
+            "Reason": "Unnecessary - for retail display only",
+            "Safe": true
+        },
+        {
+            "Name": "Fax",
+            "DisplayName": "Fax Service",
+            "Reason": "Unnecessary unless using fax",
+            "Safe": true
+        },
+        {
+            "Name": "MapsBroker",
+            "DisplayName": "Downloaded Maps Manager",
+            "Reason": "Unnecessary if not using offline maps",
+            "Safe": true
+        },
+        {
+            "Name": "lfsvc",
+            "DisplayName": "Geolocation Service",
+            "Reason": "Privacy - location tracking",
+            "Safe": true,
+            "Optional": true
+        },
+        {
+            "Name": "PcaSvc",
+            "DisplayName": "Program Compatibility Assistant Service",
+            "Reason": "Unnecessary for most users",
+            "Safe": true,
+            "Optional": true
+        }
+    ],
+
+    "ServicesToEnable": [
+        {
+            "Name": "MMCSS",
+            "DisplayName": "Multimedia Class Scheduler",
+            "Reason": "Better gaming/streaming performance",
+            "StartupType": "Automatic"
+        },
+        {
+            "Name": "Audiosrv",
+            "DisplayName": "Windows Audio",
+            "Reason": "Essential for audio",
+            "StartupType": "Automatic"
+        },
+        {
+            "Name": "AudioEndpointBuilder",
+            "DisplayName": "Windows Audio Endpoint Builder",
+            "Reason": "Essential for audio",
+            "StartupType": "Automatic"
+        }
+    ],
+
+    "CriticalServices": [
+        "wuauserv",
+        "WinDefend",
+        "SecurityHealthService",
+        "RpcSs",
+        "RpcEptMapper",
+        "DcomLaunch",
+        "PlugPlay",
+        "Power",
+        "SamSs",
+        "Schedule",
+        "SENS",
+        "SystemEventsBroker",
+        "Themes",
+        "UserManager",
+        "Winmgmt",
+        "EventLog",
+        "Netman",
+        "nsi",
+        "Dhcp",
+        "Dnscache",
+        "LanmanWorkstation",
+        "LanmanServer",
+        "mpssvc",
+        "BFE",
+        "CoreMessagingRegistrar",
+        "gpsvc",
+        "LSM",
+        "Netlogon",
+        "ProfSvc",
+        "Wcmsvc"
+    ],
+
+    "XboxServices": [
+        "XblAuthManager",
+        "XblGameSave",
+        "XboxNetApiSvc",
+        "XboxGipSvc"
+    ],
+
+    "TelemetryServices": [
+        "DiagTrack",
+        "dmwappushservice",
+        "diagnosticshub.standardcollector.service"
+    ]
+}
