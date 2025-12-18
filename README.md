@@ -12,9 +12,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="#"><img src="https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg" alt="PowerShell 5.1+"></a>
   <a href="#"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6.svg" alt="Windows 10 | 11"></a>
-  <a href="https://github.com/Nerds489/Ultimate-Windows-Setup-Toolkit/stargazers"><img src="https://img.shields.io/github/stars/Nerds489/Ultimate-Windows-Setup-Toolkit?style=social" alt="Stars"></a>
-  <a href="https://github.com/Nerds489/Ultimate-Windows-Setup-Toolkit/network/members"><img src="https://img.shields.io/github/forks/Nerds489/Ultimate-Windows-Setup-Toolkit?style=social" alt="Forks"></a>
-</p>
+  </p>
 
 <p align="center">
   <a href="#-quick-start">Quick Start</a> •
