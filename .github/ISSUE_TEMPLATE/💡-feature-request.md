@@ -1,6 +1,6 @@
 ---
 name: "\U0001F4A1 Feature Request"
-about: Suggest a new feature or enhancement
+about: Suggest a new feature or enhancement for Ultimate Windows Setup Toolkit
 title: "[FEATURE] "
 labels: enhancement
 assignees: ''
@@ -14,19 +14,22 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 A clear and concise description of what you want to happen.
 
 **Example usage**
-```bash
-netreaper <proposed command> <target>
+```powershell
+.\Start-Toolkit.ps1 -Action <proposed feature>
 ```
 
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
-**Which component would this affect?**
-- [ ] Scanning / Recon
-- [ ] Wireless / WiFi
-- [ ] Exploit Tools
-- [ ] Credential Attacks
-- [ ] Installer
+**Which module would this affect?**
+- [ ] Application Installer
+- [ ] System Optimizer
+- [ ] Debloater
+- [ ] Activator
+- [ ] Driver Updater
+- [ ] System Scanner
+- [ ] New App Addition
+- [ ] New Module
 - [ ] Other: ___
 
 **Additional context**
